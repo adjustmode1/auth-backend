@@ -1,8 +1,8 @@
 ## Ideas project
 1. Basic Authentication:
-   - [ ] Username / Email + Password
-   - [ ] Password hashing (bcrypt, salt)
-   - [ ] Login flow
+   - [x] Username / Email + Password
+   - [x] Password hashing (bcrypt, salt)
+   - [x] Login flow
    * Schemas: users
    
 
