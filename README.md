@@ -2,8 +2,7 @@
 1. Basic Authentication:
    - [ ] Username / Email + Password
    - [ ] Password hashing (bcrypt, salt)
-   - [ ] Account active / inactive
-   - [ ] Login / Logout flow
+   - [ ] Login flow
    * Schemas: users
    
 

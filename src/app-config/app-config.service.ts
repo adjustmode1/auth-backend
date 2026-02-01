@@ -1,7 +1,12 @@
 import { ConfigService } from '@nestjs/config';
-import { SystemConfig } from './app-config.interface';
+import {
+  DatabaseConfigInterface,
+  SystemConfigInterface,
+} from './app-config.interface';
+import { Injectable } from '@nestjs/common';
 
-export class AuthConfigService {
+@Injectable()
+export class AppConfigService {
   constructor(private readonly configService: ConfigService) {}
 
   get<k>(key: string): k | undefined {
@@ -12,7 +17,11 @@ export class AuthConfigService {
     return this.configService.getOrThrow<k>(key);
   }
 
-  system(): SystemConfig {
-    return this.configService.getOrThrow<SystemConfig>('system');
+  system(): SystemConfigInterface {
+    return this.configService.getOrThrow<SystemConfigInterface>('system');
+  }
+
+  database(): DatabaseConfigInterface {
+    return this.configService.getOrThrow<DatabaseConfigInterface>('database');
   }
 }
