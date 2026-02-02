@@ -7,6 +7,7 @@ import { loadConfig } from './utils/load-configuration';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppConfigService } from './app-config/app-config.service';
 import { UsersEntity } from './database/entities/users.entity';
+import { AuthTokenModule } from './auth-token/auth-token.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { UsersEntity } from './database/entities/users.entity';
       },
     }),
     AuthBasicModule,
+    AuthTokenModule
   ],
   controllers: [],
   providers: [],
